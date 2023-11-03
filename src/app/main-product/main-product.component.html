@@ -1,0 +1,38 @@
+<div id="banner">
+  <h1>Apna Bazar</h1>
+  <div id="cartbtn">
+    <button class="bbtn" routerLink="/fav">Fav ❤️</button>
+    <button class="bbtn" routerLink="/cart">Cart 🛒</button>
+  </div>
+</div>
+<div id="all_product">
+  <div id="filter">
+    <h1>Filter Products</h1>
+
+    <br /><br />
+
+    <form id="form">
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="all">All</option>
+        <option value="shoes">Shoes</option>
+        <option value="clothing">Clothing</option>
+        <!-- Add more categories as needed -->
+      </select>
+      <br /><br />
+      <label for="priceRange">Price Range:</label>
+      <select id="priceRange" name="priceRange">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+      <br /><br />
+      <br /><br />
+      <button class="bbtn">Apply Filters</button>
+    </form>
+  </div>
+  <div id="pro">
+    <app-product-list></app-product-list>
+  </div>
+</div>

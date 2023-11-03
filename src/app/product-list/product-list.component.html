@@ -1,0 +1,58 @@
+<!-- src/app/product-list/product-list.component.html -->
+
+<div id="container">
+  <div *ngFor="let product of products">
+    <div class="product-card" *ngIf="!product.showDetails">
+      <div style="width: 100%; height: 230px; margin-bottom: 10px">
+        <img [src]="product.image" alt="{{ product.name }}" />
+      </div>
+      <h2>{{ product.name }}</h2>
+      <h3>Price: ${{ product.price }}</h3>
+      <p (click)="toggelDetails(product)">View Details</p>
+      <div id="btnDiv">
+        <button
+          (click)="toggleFavorite(product)"
+          *ngIf="product.isFavorite"
+          class="fav"
+        >
+          ❤️
+        </button>
+        <button
+          (click)="toggleFavorite(product)"
+          *ngIf="!product.isFavorite"
+          class="fav"
+        >
+          🤍
+        </button>
+        <button (click)="addToCart(product)" id="cart">🛒</button>
+      </div>
+    </div>
+    <div class="product-card" *ngIf="product.showDetails">
+      <div style="width: 100%; height: 230px; margin-bottom: 10px">
+        <img [src]="product.image" alt="{{ product.name }}" />
+      </div>
+      <h2>{{ product.name }}</h2>
+      <h4>Description : {{ product.description }}</h4>
+      <h4>Category : {{ product.category }}</h4>
+      <h3>Price: ${{ product.price }}</h3>
+      <p (click)="toggelDetails(product)">View Less</p>
+      <div id="btnDiv">
+        <button
+          (click)="toggleFavorite(product)"
+          *ngIf="product.isFavorite"
+          class="fav"
+        >
+          ❤️
+        </button>
+        <button
+          (click)="toggleFavorite(product)"
+          *ngIf="!product.isFavorite"
+          class="fav"
+        >
+          🤍
+        </button>
+        <button (click)="addToCart(product)" id="cart">🛒</button>
+      </div>
+    </div>
+  </div>
+</div>

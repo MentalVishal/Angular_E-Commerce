@@ -1,0 +1,94 @@
+/* src/app/product-list/product-list.component.css */
+
+.product-card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  display: inline-block;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  justify-items: center;
+}
+
+.product-card h2 {
+  text-align: center;
+  color: blanchedalmond;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.product-card h4 {
+  text-align: center;
+  color: rgb(191, 73, 73);
+  font-size: 1.1rem;
+}
+
+.product-card p {
+  text-align: end;
+  margin: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+.fav {
+  background-color: rgb(165, 109, 173);
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+#cart {
+  width: 30%;
+  height: 45px;
+  border-radius: 8px;
+  border-width: 0;
+  color: black;
+  font-size: 1.4rem;
+  background-color: rgb(19, 54, 37);
+  cursor: pointer;
+}
+#btnDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+  margin: 10px;
+  justify-items: center;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-top: 3px;
+  text-align: center;
+  color: #666;
+}
+
+.product-card img {
+  height: 100%;
+  width: 100%;
+}
